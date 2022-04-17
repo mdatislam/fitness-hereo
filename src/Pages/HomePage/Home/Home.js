@@ -1,9 +1,12 @@
 import React from 'react';
+import Bennar from '../Bennar/Bennar';
 
 const Home = () => {
     return (
+
         <div>
-            <h3>This Home Page</h3>
+           <Bennar></Bennar>
+
         </div>
     );
 };
