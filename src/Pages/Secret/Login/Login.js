@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, ToastContainer } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import SocialMedia from "../../Shared/SocialMedia/SocialMedia";
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from "../../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
+
+
+
 
 
 const Login = () => {
@@ -11,12 +15,8 @@ const Login = () => {
   const [password,setPassword]= useState('')
   const navigate=useNavigate()
 
-  const [
-    signInWithEmailAndPassword,
-    user,
-    loading,
-    error,
-  ] = useSignInWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword,user,loading,error,] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, passwordResetError] = useSendPasswordResetEmail(auth);
   const handleToEmail=(e)=>{
     setEmail(e.target.value)
   
@@ -31,13 +31,26 @@ const Login = () => {
   signInWithEmailAndPassword(email,password)
  }
  let errorMessage
- if(error){
-   errorMessage= <p className="text-danger fs-4"> Error: {error.message}</p>
+ if(error || passwordResetError){
+   errorMessage= <p className="text-danger fs-4"> Error: {error?.message} {passwordResetError?.message}</p>
+ }
+ if(loading || sending){
+   return <Loading></Loading>
  }
  if(user){
    navigate('/Home')
  }
+const handlePasswordReset=async()=>{
+  // console.log(email)
+  if(email){ 
+    await sendPasswordResetEmail(email);
+    alert('mail sent')
+  }
+  else{
+    alert('please enter your email address');
+}
 
+}
    
   return (
     <div className="w-50 mt-3 mx-auto border p-2">
@@ -57,9 +70,10 @@ const Login = () => {
         </Button>
       </Form>
       <p>New to Fitness Heroes ? <Link className="text-decoration-none" to='/Signup'> Please Signup</Link></p>
-      <p>Forgot Password?<button className="btn btn-link text-decoration-none ">Reset Password</button></p>
+      <p>Forgot Password?<button onClick={handlePasswordReset} className="btn btn-link text-decoration-none ">Reset Password</button></p>
       {errorMessage}
     <SocialMedia></SocialMedia>
+    <ToastContainer/>
     </div>
   );
 };

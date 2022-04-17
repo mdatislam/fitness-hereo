@@ -1,0 +1,31 @@
+
+.program-container{
+ border: 1px solid #95A0A7;
+box-sizing: border-box;
+border-radius: 8px;
+
+   
+}
+.program-container img{
+    width:100%;
+    padding: 3px;
+    /* height: 350px; */
+    
+}
+.program-container span{
+    color:rgb(224, 31, 214);
+    font-size:medium;
+    font-weight: 500;
+}
+.program-container .info{
+    /* position: relative; */
+}
+.program-container button{
+background: #FFE0B3;
+border: 1px solid #95A0A7;
+box-sizing: border-box;
+border-radius: 0px 0px 8px 8px;
+/* position: absolute; */
+bottom:0;
+
+}

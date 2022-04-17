@@ -10,6 +10,8 @@ import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Login from './Pages/Secret/Login/Login';
 import Signup from './Pages/Secret/Signup/Signup';
+import Programs from './Pages/HomePage/Programs/Programs';
+import ProgramDetail from './Pages/HomePage/Program/ProgramDetail/ProgramDetail';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/Home' element={<Home></Home>}></Route>
+        <Route path='/Programs' element={<Programs></Programs>}></Route>
+        <Route path='/Program/:ProgramID' element={<ProgramDetail></ProgramDetail>}></Route>
         <Route path='/Blog' element={<Blog></Blog>}></Route>
         <Route path='/About' element={<About></About>}></Route>
         <Route path='/Login' element={<Login></Login>}></Route>

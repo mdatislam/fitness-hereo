@@ -31,7 +31,7 @@ const Signup = () => {
       return
     }
     
-      createUserWithEmailAndPassword(name,email,password)
+      createUserWithEmailAndPassword(email,password)
     // console.log(name, email,password,repassword)
   }
 

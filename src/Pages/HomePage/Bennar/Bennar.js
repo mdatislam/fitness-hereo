@@ -7,15 +7,15 @@ import bennar4 from "../../../Images/Bennar/bennar (4).jpg";
 
 const Bennar = () => {
   return (
-    <Carousel>
+    <Carousel className="mb-4">
       <Carousel.Item interval={1000}>
         <img style={{height:'550px'}}
           className="d-block w-100"
           src={bennar1}
           alt="First slide"
         />
-        <Carousel.Caption className="rounded-pill bg-dark bg-gradient py-2 w-50 mx-auto" >
-          <h3 >Get Into The Shape </h3>
+        <Carousel.Caption  >
+          <h3 className="rounded-pill bg-dark bg-gradient py-2 w-50 mx-auto">Get Into The Shape </h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
