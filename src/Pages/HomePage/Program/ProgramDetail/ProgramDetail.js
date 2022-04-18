@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Detail from '../../../Detail/Detail';
 import useProgramReview from '../../../Hooks/ProgramReview/ProgramReview';
 
@@ -10,16 +10,10 @@ const ProgramDetail = () => {
     const {ProgramID}= useParams()
     
     return (
-        <div>
-            <p>Selected Program: {ProgramID}</p>
-            
-           
-            
-            
-               
-            
-            <button className='btn btn-info'>Proceed CheckOut</button>
-        </div>
+        <div className='py-4 text-center'>
+        <h3> Service Detail No: {ProgramID}</h3>
+        <Link to='/Pay'><button className='btn btn-info'> Pay For Booking</button></Link>
+     </div>
     );
 };
 

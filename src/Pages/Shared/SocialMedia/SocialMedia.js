@@ -3,13 +3,14 @@ import google from "../../../Images/gogle.png";
 import github from "../../../Images/github.png";
 import { useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Loading from "../Loading/Loading";
 
 const SocialMedia = () => {
   const navigate= useNavigate()
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
   const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
+  const location = useLocation()
   let errorMessage
   if(googleError || githubError){
     errorMessage = <p className="text-danger text-center fs-4"> {googleError?.message} {githubError?.message}</p>
@@ -18,9 +19,9 @@ const SocialMedia = () => {
  if(googleLoading || githubLoading){
    return <Loading></Loading>
  }
-  
+  let from = location.state?.from?.pathname || '/Home'
   if(googleUser || githubUser){
-    navigate('/Home')
+    navigate(from,{replace:true})
   }
   return (
     <>

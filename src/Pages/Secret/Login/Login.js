@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { Button, Form, ToastContainer } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialMedia from "../../Shared/SocialMedia/SocialMedia";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 
 
-
-
-
 const Login = () => {
   const [email,setEmail]= useState('')
   const [password,setPassword]= useState('')
   const navigate=useNavigate()
+  const location = useLocation()
+  let from = location.state?.from?.pathname ||'/Home'
 
   const [signInWithEmailAndPassword,user,loading,error,] = useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, sending, passwordResetError] = useSendPasswordResetEmail(auth);
@@ -38,7 +37,7 @@ const Login = () => {
    return <Loading></Loading>
  }
  if(user){
-   navigate('/Home')
+   navigate(from,{replace:true})
  }
 const handlePasswordReset=async()=>{
   // console.log(email)
