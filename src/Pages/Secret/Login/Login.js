@@ -57,11 +57,11 @@ const handlePasswordReset=async()=>{
         <h4 className="text-center text-warning mb-2">Welcome To Fitness Heroes</h4>
       <Form onSubmit={handleToLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Control onBlur={handleToEmail} type="email" placeholder="Enter email" />
+          <Form.Control onBlur={handleToEmail} type="email" placeholder="Enter email" required/>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Control onBlur={handleToPassword}  type="password" placeholder="Password" />
+          <Form.Control onBlur={handleToPassword}  type="password" placeholder="Password" required />
         </Form.Group>
         
         <Button variant="primary" type="submit">

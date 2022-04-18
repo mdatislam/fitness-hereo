@@ -3,42 +3,42 @@
             "id": 1,
             "name": "6 PACK WORKOUT",
             "price": "100/month",
-            "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+            "description": " makes you feel steadier on your feet and helps prevent falls. It's especially important as we get older, when the systems that help us maintain balance—our vision, our inner ear, and our leg muscles and joints—tend to break down. The good news is that training your balance can help prevent and reverse these losses, says Wilson.",
             "img": "https://maruthi.wpengine.com/wp-content/uploads/2017/12/class5.jpg"
         },
     {
             "id": 2,
             "name": "PULL UP",
             "price": "120/month",
-            "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+            "description": "Movement: Lift your left knee toward the ceiling as high as is comfortable or until your thigh is parallel to the floor. Hold, then slowly lower your knee to the starting position.",
             "img": "https://maruthi.wpengine.com/wp-content/uploads/2017/12/class3.jpg"
         },
     {
             "id": 3,
             "name": "LEG WORKOUT",
             "price": "110/month",
-            "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+            "description": " Movement: Relax your shoulders against the floor. Bend your left knee and place your left foot on your right thigh just above the knee. Tighten your abdominal muscles, then grasp your left knee with your right hand and gently pull it across your body toward your right side",
             "img": "https://maruthi.wpengine.com/wp-content/uploads/2017/12/class2.jpg"
         },
     {
             "id": 4,
             "name": "WEIGHT LIFT",
             "price": "90/month",
-            "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+            "description":" Movement: Slowly bend your hips and knees, lowering your buttocks about eight inches, as if you're sitting back into a chair. Let your arms swing forward to help you balance. Keep your back straight. Slowly return to the starting position. Repeat 8-12 times.",
             "img": "https://maruthi.wpengine.com/wp-content/uploads/2014/01/portfolio6.jpg"
         },
     {
             "id": 5,
-            "name": "TRYCEPS",
+            "name": "Stretching",
             "price": "100/month",
-            "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+            "description": "Stretching helps maintain flexibility. We often overlook that in youth when our muscles are healthier. But aging leads to a loss of flexibility in the muscles and tendons. Muscles shorten and don't function properly. That increases the risk for muscle cramps and pain, muscle damage, strains, joint pain, and falling, and it also makes it tough to get through daily activities, such as bending down to tie your shoes..",
             "img": "https://maruthi.wpengine.com/wp-content/uploads/2014/01/portfolio11.jpg"
         },
     {
             "id": 6,
             "name": "LIFTING",
             "price": "130/month",
-            "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+            "description": "You can also go to a physical therapist, who can determine your current balance abilities and prescribe specific exercises to target your areas of weakness. That's especially important if you've had a fall or a near-fall, or if you have a fear of falling, explains Wilson.",
             "img": "https://maruthi.wpengine.com/wp-content/uploads/2014/01/portfolio10.jpg"
         }
     
