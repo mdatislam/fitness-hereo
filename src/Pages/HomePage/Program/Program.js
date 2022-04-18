@@ -16,7 +16,7 @@ const Program = ({program}) => {
            <p> Charge: $ <span>{price}</span></p>
             <h5>{name}</h5>
            </div>
-           <button onClick={()=>{handleToDetail(id)}} className=' btn btn-outline-success w-100'>READ MORE</button>
+           <button onClick={()=>{handleToDetail(id)}} className=' btn btn-outline-success w-100'>RED MORE</button>
            
             
         </div>

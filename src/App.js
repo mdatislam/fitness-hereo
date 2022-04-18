@@ -11,12 +11,17 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Login from './Pages/Secret/Login/Login';
 import Signup from './Pages/Secret/Signup/Signup';
 import Programs from './Pages/HomePage/Programs/Programs';
-import ProgramDetail from './Pages/HomePage/Program/ProgramDetail/ProgramDetail';
 import SecurePage from './Pages/Secret/SecurePage/SecurePage';
 import Booking from './Pages/Secret/Booking/Booking';
+import { createContext, useState } from "react";
+import ProgramDetail from './Pages/HomePage/ProgramDetail/ProgramDetail';
+
+export const programContext=createContext()
 
 function App() {
+  const [Programs, setPrograms] = useState([]);
   return (
+    <programContext.Provider value={[Programs, setPrograms]}>
     <div>
       <Header></Header>
       <Routes>
@@ -36,8 +41,8 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
-      
     </div>
+    </programContext.Provider>
   );
 }
 

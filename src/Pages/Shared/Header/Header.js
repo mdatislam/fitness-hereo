@@ -12,13 +12,13 @@ const Header = () => {
   }
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+      <Navbar collapseOnSelect expand="lg" sticky='top' bg="primary" variant="dark">
         <Container>
           <Navbar.Brand  as={Link} to='/'>Home</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#Packages">Programs</Nav.Link>
+              <Nav.Link id="Programs" as={Link}to="Home#Programs">Programs</Nav.Link>
               <Nav.Link href="#Trainer">Trainer</Nav.Link>
               <Nav.Link  as={Link} to='/Blog'>Blog</Nav.Link>
             </Nav>
@@ -26,7 +26,7 @@ const Header = () => {
               <Nav.Link  as={Link} to='/About'>About</Nav.Link>
               {
                 user? 
-                <button onClick={handleSignOut} className="btn btn-info">Sign-Out</button>
+                <button onClick={handleSignOut} className="btn btn-warning">Sign-Out</button>
                 :
                 <Nav.Link eventKey={2} as={Link} to='/Login'>
                 Login

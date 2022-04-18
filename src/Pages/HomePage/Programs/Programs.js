@@ -1,20 +1,23 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import useProgramReview from '../../Hooks/ProgramReview/ProgramReview';
+import React, { useContext, useEffect } from 'react';
+import { programContext } from '../../../App';
 import Program from '../Program/Program';
-import ProgramDetail from '../Program/ProgramDetail/ProgramDetail';
 import './Programs.css'
 
 const Programs = () => {
-    const [programs,setPrograms]= useProgramReview();
-  
+    const [Programs,setPrograms] = useContext(programContext);
+    useEffect(()=>{
+        fetch('Programs.json')
+        .then(res=>res.json())
+        .then(data=>setPrograms(data))
+    },[])
     
     return (
         <div>
-            <h2 className='text-center text-dark py-3 fw-bolder'>GYM <span className='text-danger'>PROGRAMS</span>  : {programs.length}</h2>
+            
+            <h2 className='text-center text-dark py-3 fw-bolder'>GYM <span className='text-danger'>PROGRAMS</span>  : {Programs.length}</h2>
            <div className='container programs-container'>
            {
-                programs.map(program=> <Program
+                Programs.map(program=> <Program
                 key={program.id}
                 program={program}
                 ></Program>)

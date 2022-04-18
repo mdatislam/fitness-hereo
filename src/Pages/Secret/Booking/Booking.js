@@ -3,7 +3,7 @@ import React from 'react';
 const Booking = () => {
     return (
         <div>
-            <h4>This booked Page</h4>
+            <h4 className='text-center text-danger '>This is Secure Page</h4>
         </div>
     );
 };
